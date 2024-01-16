@@ -1,4 +1,4 @@
-<?php $this->layout('layouts/admin', ["title" => "Criar Post"]) ?>
+<?php $this->layout('layouts/admin', ["title" => "Novo Post"]) ?>
 
 <div class="flex flex-col md:flex-row items-start md:items-center md:justify-between mb-4 w-full gap-2">
     <h1 class="text-2xl font-bold">Novo post</h1>

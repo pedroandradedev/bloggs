@@ -56,7 +56,7 @@ class PostController extends Controller
 
     public function edit($data)
     {
-        $post = (new Post)->find("id = :i", "i={$data["id"]}")->fetch();
+        $post = (new Post)->findById($data["id"]);
         if (!$post) {
             return (new ErrorController($this->router))->error(404);
         }
@@ -72,7 +72,7 @@ class PostController extends Controller
             return $this->router->redirect("post.edit", ["id" => $data["id"]]);
         }
 
-        $post = (new Post)->find("id = :i", "i={$data["id"]}")->fetch();
+        $post = (new Post)->findById($data["id"]);
         if (!$post) {
             return (new ErrorController($this->router))->error(404);
         }
@@ -119,7 +119,7 @@ class PostController extends Controller
 
     public function delete($data)
     {
-        $post = (new Post)->find("id = :i", "i={$data["id"]}")->fetch();
+        $post = (new Post)->findById($data["id"]);
         if (!$post) {
             flash("status", "Os dados do post não foram encontrados!", FLASH_ERROR);
             return $this->router->redirect("admin.dashboard");

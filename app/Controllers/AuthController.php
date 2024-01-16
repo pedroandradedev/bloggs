@@ -29,14 +29,14 @@ class AuthController extends Controller
           ]);
         }
 
-        $_SESSION["blog:user"] = $user->id;
+        $_SESSION["bloggs:user"] = $user->id;
         echo ajax([
           "redirect" => $this->router->route("admin.dashboard")
         ]);
     }
 
     public function logout() {
-        unset($_SESSION["blog:user"]);
+        unset($_SESSION["bloggs:user"]);
         return $this->router->redirect("auth.login");
     }
 }

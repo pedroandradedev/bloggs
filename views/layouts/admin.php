@@ -28,6 +28,7 @@
             </a>
             <nav class="md:ml-auto flex flex-wrap flex-col md:flex-row items-center text-base justify-center gap-5">
                 <a href="<?= $router->route("admin.dashboard") ?>" class="hover:text-gray-900">Posts</a>
+                <a href="<?= $router->route("user.index") ?>" class="hover:text-gray-900">Usuários</a>
                 <a href="<?= $router->route("auth.logout") ?>" class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base">Sair
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 ml-1"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" x2="9" y1="12" y2="12"/></svg>
                 </a>

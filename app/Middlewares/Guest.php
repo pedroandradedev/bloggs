@@ -8,7 +8,7 @@ class Guest
 {
     public function handle(Router $router): bool
     {
-        if (!isset($_SESSION["blog:user"]) || $_SESSION["blog:user"] == "") {
+        if (!isset($_SESSION["bloggs:user"]) || $_SESSION["bloggs:user"] == "") {
             return true;
         }
         return $router->redirect("admin.dashboard");

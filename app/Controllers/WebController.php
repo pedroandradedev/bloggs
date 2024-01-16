@@ -13,7 +13,7 @@ class WebController extends Controller
     }
 
     public function post($data) {
-        $post = (new Post)->find("id = :i", "i={$data["id"]}")->fetch();
+        $post = (new Post)->findById($data["id"]);
         if (!$post) {
             return (new ErrorController($this->router))->error(404);
         }
